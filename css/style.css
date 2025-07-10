@@ -1,20 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600&display=swap');
 
 :root {
-  --bg: #f4e4e4;
-  --text: #2a0000;
-  --accent: #7a0000;
-  --highlight: #d22b2b;
+  --bg: #fdeaea;
+  --text: #330000;
+  --accent: #900000;
+  --highlight: #b22222;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
 body {
-  font-family: 'Inter', sans-serif;
+  font-family:'Inter', sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.7;
@@ -22,83 +18,78 @@ body {
 
 header {
   background: var(--bg);
-  padding: 2rem 4%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 2px solid var(--highlight);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  padding:2rem 4%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:2px solid var(--highlight);
+  position:sticky; top:0; z-index:100;
 }
 
 .logo {
-  font-family: 'DM Serif Display', serif;
-  font-size: 2rem;
+  font-family:'DM Serif Display', serif;
+  font-size:2rem;
   color: var(--accent);
 }
 
 nav a {
-  margin-left: 2rem;
-  text-decoration: none;
+  margin-left:2rem;
+  text-decoration:none;
   color: var(--text);
-  font-weight: 600;
-  position: relative;
+  font-weight:600;
+  position:relative;
 }
 
 nav a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  height: 2px;
-  width: 0%;
-  background: var(--highlight);
+  content:'';
+  position:absolute; left:0; bottom:-4px;
+  width:0%; height:2px; background: var(--highlight);
   transition: width 0.3s;
 }
 
-nav a:hover::after {
-  width: 100%;
+nav a:hover::after,
+nav a.active::after {
+  width:100%;
 }
 
 main {
-  padding: 4rem 6%;
-  max-width: 1200px;
-  margin: auto;
+  padding:4rem 6%;
+  max-width:1200px;
+  margin:auto;
 }
 
 /* Hero */
 .hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 4rem;
-  margin-top: 4rem;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:4rem;
+  margin-top:4rem;
 }
 
 .hero-text h1 {
-  font-family: 'DM Serif Display', serif;
-  font-size: 3.2rem;
+  font-family:'DM Serif Display', serif;
+  font-size:3.2rem;
   color: var(--accent);
-  margin-bottom: 1rem;
+  margin-bottom:1rem;
 }
 
 .hero-text p {
-  font-size: 1.2rem;
-  max-width: 90%;
+  font-size:1.2rem;
+  max-width:90%;
 }
 
 .btn {
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 0.8rem 2.2rem;
+  display:inline-block;
+  margin-top:2rem;
+  padding:0.8rem 2.2rem;
   background: var(--accent);
-  color: white;
-  font-weight: 600;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(122, 0, 0, 0.3);
-  text-decoration: none;
-  transition: all 0.3s ease;
+  color:white;
+  font-weight:600;
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(144,0,0,0.3);
+  text-decoration:none;
+  transition:all 0.3s ease;
 }
 
 .btn:hover {
@@ -106,50 +97,50 @@ main {
   transform: scale(1.05);
 }
 
-/* Cards Section */
+/* Sections */
 .section-title {
-  font-family: 'DM Serif Display', serif;
-  font-size: 2.4rem;
+  font-family:'DM Serif Display', serif;
+  font-size:2.4rem;
   color: var(--accent);
-  margin-bottom: 2rem;
-  text-align: center;
+  margin-bottom:2rem;
+  text-align:center;
 }
 
 .cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+  gap:2rem;
 }
 
 .card {
-  background: white;
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 15px 45px rgba(0,0,0,0.05);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  transform-style: preserve-3d;
-  perspective: 1000px;
+  background:white;
+  padding:2rem;
+  border-radius:16px;
+  box-shadow:0 15px 45px rgba(0,0,0,0.05);
+  transition: transform .4s ease, box-shadow .4s ease;
+  transform-style:preserve-3d;
+  perspective:1000px;
 }
 
 .card:hover {
   transform: translateY(-10px) rotateX(2deg) rotateY(-2deg);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+  box-shadow:0 20px 60px rgba(0,0,0,0.1);
 }
 
 .card h3 {
-  font-size: 1.4rem;
-  margin-bottom: 0.8rem;
+  font-size:1.4rem;
+  margin-bottom:0.8rem;
   color: var(--accent);
 }
 
 .card p {
-  font-size: 1rem;
-  color: #555;
+  font-size:1rem;
+  color:#555;
 }
 
 footer {
-  padding: 2rem;
-  text-align: center;
-  color: #555;
-  font-size: 0.9rem;
+  padding:2rem;
+  text-align:center;
+  color:#555;
+  font-size:0.9rem;
 }
