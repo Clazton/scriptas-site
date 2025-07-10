@@ -1,97 +1,217 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
 
-* { box-sizing: border-box; margin:0; padding:0; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
 body {
-  font-family:'Montserrat',sans-serif;
-  background:#120000; color:#eee;
-  min-height:100vh; display:flex; flex-direction:column;
-  overflow-x:hidden;
+  background: #120000;
+  color: #eee;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
 }
-a { color:inherit; text-decoration:none; }
 
-/* HEADER */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 header {
-  position:sticky; top:0; background:#330000;
-  padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center;
-  box-shadow:0 4px 12px rgba(255,0,0,0.5);
-  animation:fadeInDown .8s ease-out;
+  position: sticky;
+  top: 0;
+  background: #330000;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.5);
+  animation: fadeInDown 0.8s ease-out;
 }
+
 header h1 {
-  font-size:1.8rem; color:#ff4040; letter-spacing:4px;
-  animation:neon 1.5s alternate infinite;
+  font-size: 1.8rem;
+  color: #ff4040;
+  letter-spacing: 4px;
+  animation: neon 1.5s alternate infinite;
 }
+
 nav a {
-  margin-left:2rem; position:relative; padding:.2rem 0;
-  transition:color .3s;
+  margin-left: 2rem;
+  position: relative;
+  padding: 0.2rem 0;
+  transition: color 0.3s;
 }
-nav a.active, nav a:hover { color:#fff; }
+
+nav a:hover {
+  color: #fff;
+}
+
 nav a::after {
-  content:''; position:absolute; left:0; bottom:-4px;
-  height:2px; background:#ff4040; width:0; transition:width .3s;
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  background: #ff4040;
+  width: 0;
+  transition: width 0.3s;
 }
-nav a.active::after, nav a:hover::after { width:100%; }
 
-/* MAIN SECTIONS */
-main { flex:1; max-width:960px; margin:2rem auto; padding:0 1rem; }
+nav a:hover::after {
+  width: 100%;
+}
+
+main {
+  flex: 1;
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
 .section {
-  opacity:0; transform:translateY(30px);
-  animation:fadeInUp .8s forwards;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s forwards;
 }
-.section:nth-child(1){animation-delay:.3s;}
-.section:nth-child(2){animation-delay:.5s;}
-.section:nth-child(3){animation-delay:.7s;}
 
-/* HERO */
-.hero { text-align:center; padding:6rem 1rem 4rem; }
+.section:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.section:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.section:nth-child(3) {
+  animation-delay: 0.7s;
+}
+
+.hero {
+  text-align: center;
+  padding: 6rem 1rem 4rem;
+}
+
 .hero h2 {
-  font-size:clamp(2.5rem,6vw,4rem); color:#ff6060;
-  animation:neon 1.5s alternate infinite;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: #ff6060;
+  animation: neon 1.5s alternate infinite;
 }
-.hero p { margin:1.5rem auto; font-weight:300; max-width:600px; }
+
+.hero p {
+  margin: 1.5rem auto;
+  font-weight: 300;
+  max-width: 600px;
+}
+
 .btn-prominent {
-  background:#ff4040; color:#fff; padding:1rem 2.5rem; border-radius:999px;
-  font-weight:600; box-shadow:0 0 30px rgba(255,64,64,0.6);
-  transition:transform .3s, box-shadow .3s;
+  background: #ff4040;
+  color: #fff;
+  padding: 1rem 2.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  box-shadow: 0 0 30px rgba(255, 64, 64, 0.6);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
+
 .btn-prominent:hover {
-  transform:scale(1.05); box-shadow:0 0 45px rgba(255,64,64,0.9);
+  transform: scale(1.05);
+  box-shadow: 0 0 45px rgba(255, 64, 64, 0.9);
 }
+
 .hero .btn-secondary {
-  margin-top:1rem; background:transparent; border:2px solid #ff4040;
-  color:#ff8080; padding:.8rem 2rem; border-radius:999px;
-  transition:background .3s,color .3s;
+  margin-top: 1rem;
+  background: transparent;
+  border: 2px solid #ff4040;
+  color: #ff8080;
+  padding: 0.8rem 2rem;
+  border-radius: 999px;
+  transition: background 0.3s, color 0.3s;
 }
+
 .hero .btn-secondary:hover {
-  background:#ff4040; color:#fff;
+  background: #ff4040;
+  color: #fff;
 }
 
-/* SERVICES */
 .services-grid {
-  display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
 }
+
 .card {
-  background:#2b0000; border-radius:12px; padding:2rem;
-  box-shadow:0 0 25px rgba(255,64,64,0.5);
-  transition:transform .3s,box-shadow .3s;
+  background: #2b0000;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 0 25px rgba(255, 64, 64, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
+
 .card:hover {
-  transform:translateY(-10px); box-shadow:0 0 45px rgba(255,64,64,0.8);
+  transform: translateY(-10px);
+  box-shadow: 0 0 45px rgba(255, 64, 64, 0.8);
 }
-.card h3 { margin-bottom:1rem; color:#ff5e5e; }
 
-/* FOOTER */
 footer {
-  background:#120000; padding:2rem; text-align:center;
-  animation:pulseBG 4s infinite;
+  background: #120000;
+  padding: 2rem;
+  text-align: center;
+  animation: pulseBG 4s infinite;
 }
-footer a {
-  font-size:2rem; color:#ff8080;
-  transition:transform .3s,color .3s;
-}
-footer a:hover { color:#ff4040; transform:scale(1.1); }
 
-/* ANIMATIONS */
-@keyframes fadeInDown {from{opacity:0;transform:translateY(-50px);}to{opacity:1;transform:translateY(0);}}
-@keyframes neon {from{text-shadow:0 0 8px #ff6060;}to{text-shadow:0 0 16px #ff9090;}}
-@keyframes fadeInUp {from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
-@keyframes pulseBG {0%,100%{background:#120000;}50%{background:#1e0000;}}
+footer a {
+  font-size: 2rem;
+  color: #ff8080;
+  transition: transform 0.3s, color 0.3s;
+}
+
+footer a:hover {
+  color: #ff4040;
+  transform: scale(1.1);
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes neon {
+  from {
+    text-shadow: 0 0 8px #ff6060;
+  }
+  to {
+    text-shadow: 0 0 16px #ff9090;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseBG {
+  0%,
+  100% {
+    background: #120000;
+  }
+  50% {
+    background: #1e0000;
+  }
+}
