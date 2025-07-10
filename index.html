@@ -1,238 +1,33 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Scriptas | Home</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-
-    /* Background animation */
-    @keyframes bgGradient {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
-    }
-
-    @keyframes flickerText {
-      0%, 100% {
-        text-shadow: 0 0 10px #b22222, 0 0 20px #ff2400;
-        opacity: 1;
-      }
-      50% {
-        text-shadow: 0 0 30px #ff4500, 0 0 40px #ff6347;
-        opacity: 0.85;
-      }
-    }
-
-    @keyframes fadeSlideUp {
-      from {opacity: 0; transform: translateY(30px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-
-    @keyframes pulseShadow {
-      0%, 100% { box-shadow: 0 0 10px #cc0000; }
-      50% { box-shadow: 0 0 25px #ff4c4c; }
-    }
-
-    @keyframes underlineGrow {
-      from { width: 0; }
-      to { width: 100%; }
-    }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      background: linear-gradient(-45deg, #7f0000, #a00000, #b22222, #800000);
-      background-size: 400% 400%;
-      animation: bgGradient 20s ease infinite;
-      font-family: 'Poppins', sans-serif;
-      color: #f5e9e9;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 1rem;
-    }
-
-    header {
-      width: 100%;
-      max-width: 960px;
-      padding: 1.5rem 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 2px solid #ff4c4c;
-      margin-bottom: 3rem;
-    }
-
-    header h1 {
-      font-size: 2.8rem;
-      font-weight: 700;
-      color: #ff3333;
-      letter-spacing: 3px;
-      animation: flickerText 3s ease-in-out infinite;
-      cursor: default;
-    }
-
-    nav a {
-      color: #ffb3b3;
-      text-decoration: none;
-      margin-left: 2rem;
-      font-weight: 600;
-      font-size: 1.1rem;
-      position: relative;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover,
-    nav a[aria-current="page"] {
-      color: #ff4c4c;
-    }
-
-    nav a::after {
-      content: "";
-      position: absolute;
-      bottom: -6px;
-      left: 0;
-      height: 2px;
-      background-color: #ff4c4c;
-      width: 0;
-      transition: width 0.4s ease;
-      border-radius: 2px;
-    }
-
-    nav a:hover::after,
-    nav a[aria-current="page"]::after {
-      width: 100%;
-      animation: underlineGrow 0.4s forwards;
-    }
-
-    main {
-      width: 100%;
-      max-width: 960px;
-      background: rgba(139, 0, 0, 0.3);
-      border-radius: 20px;
-      padding: 3rem 4rem;
-      box-shadow: 0 0 30px #b22222aa;
-      animation: fadeSlideUp 1.2s ease forwards;
-      text-align: center;
-    }
-
-    main h2 {
-      font-size: 3rem;
-      color: #ff5858;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-      letter-spacing: 2px;
-      text-shadow: 0 0 15px #ff6f6f;
-      animation: flickerText 3s ease-in-out infinite;
-    }
-
-    main p {
-      font-size: 1.3rem;
-      color: #ffdede;
-      line-height: 1.7;
-      margin-bottom: 3rem;
-      letter-spacing: 0.7px;
-    }
-
-    .btn-primary {
-      display: inline-block;
-      background: linear-gradient(45deg, #ff3b3b, #cc0000);
-      padding: 1rem 3.5rem;
-      border-radius: 50px;
-      color: white;
-      font-weight: 700;
-      font-size: 1.25rem;
-      border: none;
-      cursor: pointer;
-      box-shadow: 0 0 15px #cc0000;
-      transition: background 0.4s ease, transform 0.3s ease, box-shadow 0.4s ease;
-      animation: pulseShadow 3s ease-in-out infinite;
-      text-decoration: none;
-      user-select: none;
-      user-focus: none;
-    }
-
-    .btn-primary:hover {
-      background: linear-gradient(45deg, #ff6666, #ff1a1a);
-      transform: scale(1.1);
-      box-shadow: 0 0 30px #ff1a1a;
-    }
-
-    footer {
-      width: 100%;
-      max-width: 960px;
-      margin-top: 4rem;
-      padding: 1.5rem 0;
-      text-align: center;
-      color: #ff9999;
-      font-size: 0.95rem;
-      border-top: 2px solid #cc0000;
-      user-select: none;
-    }
-
-    footer .social-links {
-      margin-bottom: 1rem;
-    }
-
-    footer .social-links a {
-      color: #ff9999;
-      font-size: 2.2rem;
-      margin: 0 1.2rem;
-      transition: color 0.3s ease;
-      text-decoration: none;
-    }
-
-    footer .social-links a:hover {
-      color: #ff1a1a;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      main {
-        padding: 2rem 2rem;
-      }
-      main h2 {
-        font-size: 2.4rem;
-      }
-      main p {
-        font-size: 1.1rem;
-      }
-      .btn-primary {
-        padding: 0.9rem 2.5rem;
-        font-size: 1.1rem;
-      }
-    }
-  </style>
+  <title>Scriptas - Home</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header>
-    <h1>Scriptas</h1>
-    <nav>
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="services.html">Services</a>
-      <a href="about.html">About</a>
-    </nav>
-  </header>
 
-  <main role="main" aria-label="Homepage introduction and navigation">
-    <h2>Innovative Digital Solutions, Crafted to Perfection</h2>
-    <p>
-      Welcome to Scriptas — your trusted partner in bespoke software development, specialized in creating dynamic bots and sophisticated web platforms tailored to your unique requirements.
-    </p>
-    <a href="services.html" class="btn-primary" role="button" aria-label="Discover our professional services">Discover Our Services</a>
-  </main>
+<header>
+  <h1>Scriptas</h1>
+  <nav>
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
 
-  <footer>
-    <div class="social-links" aria-label="Social media links">
-      <a href="https://discord.gg/scriptas" target="_blank" rel="noopener" aria-label="Join Scriptas Discord">
-        <svg aria-hidden="true" focusable="false" width="24" height="24" fill="#ff6666" viewBox="0 0 24 24">
-          <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561 19.9 19.9 0 006.0347 3.0534.0777.0777 0 00.0842-.0276c.4646-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057 13.108 13.108 0 01-1.872-.8953.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.927 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.119.099.246.1981.372.2924a.077.077 0 01-.0064.1276 12.579 12.579 0 01-1.873.8952.0766.0766 0 00-.0407.106c.3604.698.769 1.3628 1.225 1.9932a.076.076 0 00.0842.028 19.876 19.876 0 006.035-3.054.082.082 0 00.0307-.0558c.5-5.177-.8382-9.6739-3.5485-13.66a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.4189 0 1.3333-.9555 2.419-2.1569 2.419zm7.9748 0c-1.1824 0-2.1568-1.0857-2.1568-2.419 0-1.3332.9554-2.4189 2.1568-2.4189 1.2109 0 2.1758 1.0952 2.1569 2.4189 0 1.3333-.946 2.419-2.1569 2.419z"/>
-        </svg>
-      </a>
-    </div>
-    <p>© 2025 Scriptas. All rights reserved.</p>
-  </footer>
+<main class="container">
+  <section class="hero" aria-label="Welcome section">
+    <h2>Welcome to Scriptas</h2>
+    <p>Your premier destination for cutting-edge bots and custom websites.</p>
+    <a href="services.html" class="btn-main" role="button">Explore Our Services</a>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 Scriptas Development Team
+</footer>
+
 </body>
 </html>
