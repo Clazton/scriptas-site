@@ -1,72 +1,48 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Scriptas | Services</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 
 <header class="header">
-  <div class="container header-container">
-    <h1 class="logo" tabindex="0">Scriptas</h1>
-    <nav class="nav" role="navigation" aria-label="Primary navigation">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="services.html" class="nav-link active" aria-current="page">Services</a>
-      <a href="about.html" class="nav-link">About</a>
+  <div class="nav-container container">
+    <div class="logo">Scriptas</div>
+    <nav class="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="about.html">About</a>
     </nav>
   </div>
 </header>
 
-<main class="main-content container">
-  <section class="services-section" aria-label="Our services">
-    <h2 class="section-title" tabindex="0">Our Expert Services</h2>
-
-    <article class="service-card" tabindex="0" aria-label="Custom Discord Bots">
-      <h3 class="service-title">Custom Discord Bots</h3>
-      <p>Scriptas engineers tailor-made Discord bots designed for superior performance and seamless integration, including:</p>
-      <ul class="service-list">
-        <li>ERLC Bots — specialized, efficient bots for the game ER:LC</li>
-        <li>Moderation Bots — robust tools like Carl-bot for effortless server management</li>
-        <li>Protection Bots — comprehensive security to safeguard your community</li>
+<main class="container">
+  <h2 class="section-title">Premium Services</h2>
+  <div class="services">
+    <div class="service-card">
+      <h3>Custom Discord Bots</h3>
+      <ul>
+        <li>ERLC Bots</li>
+        <li>Advanced Moderation Bots</li>
+        <li>Protection & Security Bots</li>
       </ul>
-      <p class="turnaround"><strong>Estimated Delivery:</strong> Within 2 business days, depending on complexity.</p>
-    </article>
-
-    <article class="service-card" tabindex="0" aria-label="Custom Websites">
-      <h3 class="service-title">Custom Websites</h3>
-      <p>Our developers craft visually stunning and functionally rich websites customized to your needs, featuring:</p>
-      <ul class="service-list">
-        <li>Interactive Chatting Platforms</li>
-        <li>Gaming and Community Websites</li>
-        <li>AI-Powered Intelligent Solutions</li>
-      </ul>
-      <p class="turnaround"><strong>Estimated Delivery:</strong> Up to 5 business days, variable with project scope.</p>
-    </article>
-
-    <div class="disclaimer" tabindex="0">
-      <p>Please note: Delivery timelines vary based on project complexity and current team workload. Quality is our priority.</p>
+      <p><strong>Delivery:</strong> ~2 business days (scope-dependent).</p>
     </div>
-  </section>
+    <div class="service-card">
+      <h3>Custom Websites</h3>
+      <ul>
+        <li>Interactive Chat Platforms</li>
+        <li>Gaming & Community Sites</li>
+        <li>AI-Driven Web Applications</li>
+      </ul>
+      <p><strong>Delivery:</strong> Up to 5 business days (project-dependent).</p>
+    </div>
+  </div>
 </main>
 
-<footer class="footer">
-  <p>&copy; 2025 Scriptas Development Team</p>
-</footer>
-
-<script>
-  // Animate service cards on scroll into view
-  const cards = document.querySelectorAll('.service-card');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('slide-up');
-      }
-    });
-  }, {threshold: 0.2});
-  cards.forEach(card => observer.observe(card));
-</script>
+<footer class="footer">&copy; 2025 Scriptas Development Team</footer>
 
 </body>
 </html>
