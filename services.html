@@ -1,87 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Scriptas | Services</title>
-<link rel="stylesheet" href="css/style.css" />
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="css/style.css"/>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
-
 <header>
   <h1>Scriptas</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html" class="active">Services</a>
-    <a href="about.html">About</a>
-  </nav>
+  <nav><a href="index.html">Home</a><a href="services.html" class="active">Services</a><a href="about.html">About</a></nav>
 </header>
-
 <main>
-  <section data-reveal>
-    <h2 style="text-align:center; color:#ff4a4a; margin-bottom:2rem;">In-Depth Services</h2>
-    
+  <section data-animation>
+    <h2 style="text-align:center;color:#ff4e4e;margin-bottom:2rem;">Deep Dive Services</h2>
     <div class="services-grid">
-      <!-- Discord Bot Deep -->
-      <div class="service-card">
-        <h3>Custom Discord Bots</h3>
-        <p>Bring your server to life with a bot built exactly how you want it — mods, music, games, AI, giveaways, analytics, you name it.</p>
-      </div>
-
-      <!-- Websites Deep -->
-      <div class="service-card">
-        <h3>Custom Websites</h3>
-        <p>Create online spaces that look stunning and perform flawlessly — portfolios, brand sites, landing pages, stores.</p>
-      </div>
-
-      <!-- Bot Features -->
-      <div class="service-card">
-        <h3>Bot Features</h3>
-        <ul style="margin-top:1rem; color:#ffd6d6;">
-          <li>🔒 Mod Tools: anti-spam, auto roles, logs</li>
-          <li>🎵 Music Queues: play from YouTube, Spotify</li>
-          <li>🧠 AI: chat assistants, auto responses</li>
-          <li>🎉 Events/Giveaways: setup & track winners</li>
-        </ul>
-      </div>
-
-      <!-- Website Features -->
-      <div class="service-card">
-        <h3>Website Features</h3>
-        <ul style="margin-top:1rem; color:#ffd6d6;">
-          <li>⚡ Fast & Lightweight</li>
-          <li>📱 Fully Responsive</li>
-          <li>🛠️ SEO & Performance</li>
-          <li>🎨 Custom Design & Branding</li>
-        </ul>
-      </div>
+      <div class="service-card"><h3>Discord Bot Essentials</h3><p>Moderation, music, roles, analytics—built to scale with your server.</p></div>
+      <div class="service-card"><h3>Advanced Features</h3><p>AI chat, giveaways, custom commands, event automation, all tailored.</p></div>
+      <div class="service-card"><h3>Web Essentials</h3><p>Fast design, responsive setup, branding, portfolio or business sites.</p></div>
+      <div class="service-card"><h3>Next-Level Web</h3><p>SEO-ready, CMS options, e‑commerce, performance‑optimized, secure hosting.</p></div>
     </div>
-
-    <p style="text-align:center; margin-top:3rem;">
-      <a class="btn" href="https://discord.gg/scriptas" target="_blank">Let's Get Started</a>
-    </p>
   </section>
+  <section class="card" data-animation><p style="text-align:center;margin-top:2rem;"><a href="https://discord.gg/scriptas" class="cta-btn">Start Your Project</a></p></section>
 </main>
-
-<footer>
-  <p>© 2025 Scriptas. All rights reserved.</p>
-  <div class="social-links">
-    <a href="https://discord.gg/scriptas" target="_blank"><i class="fab fa-discord"></i></a>
-  </div>
-</footer>
-
+<footer><p>© 2025 Scriptas</p><div><a href="https://discord.gg/scriptas"><i class="fab fa-discord"></i></a></div></footer>
 <script>
-  const opts = { threshold: 0.2 };
-  const reveal = el => {
-    const io = new IntersectionObserver((entries,o) => {
-      entries.forEach(e => {
-        if(e.isIntersecting) e.target.classList.add('visible'), o.unobserve(e.target);
-      });
-    }, opts);
-    document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
-  };
-  reveal();
+  document.querySelectorAll('[data-animation]').forEach((el,i)=>
+    setTimeout(()=>el.style.animation="fadeInUp .8s ease "+(0.2*i)+"s forwards",100)
+  );
 </script>
-
 </body>
 </html>
