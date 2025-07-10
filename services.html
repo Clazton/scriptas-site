@@ -1,36 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Scriptas | Services</title>
-  <link rel="stylesheet" href="css/style.css"/>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Scriptas - Services</title>
+<link rel="stylesheet" href="css/style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-<header>
+
+<nav>
   <div class="logo">Scriptas</div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html" class="active">Services</a>
-    <a href="about.html">About</a>
-  </nav>
-</header>
-
-<main>
-  <h2 class="section-title">Our Capabilities</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Custom Discord Bots</h3>
-      <p>Specialized ERLC, moderation, and protection bots—crafted to your specifications.</p>
-      <p><strong>Delivery:</strong> Approx. 2 business days</p>
-    </div>
-    <div class="card">
-      <h3>Custom Websites</h3>
-      <p>High-end websites for portfolios, gaming communities, and AI-driven platforms.</p>
-      <p><strong>Delivery:</strong> Approx. 5 business days</p>
-    </div>
+  <div class="menu-toggle" id="mobile-menu">
+    <div></div>
+    <div></div>
+    <div></div>
   </div>
-</main>
+  <ul class="nav-list">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html" class="active">Services</a></li>
+  </ul>
+</nav>
 
-<footer>&copy; 2025 Scriptas. All rights reserved.</footer>
+<section class="container">
+  <h1 class="section-title">Scriptas Services</h1>
+
+  <div class="service-card" style="margin-bottom: 2rem;">
+    <h3>Custom Discord Bots</h3>
+    <p>We offer custom-made bots including:</p>
+    <ul>
+      <li>ERLC Bots</li>
+      <li>Moderation Bots (like Carl-bot)</li>
+      <li>Protection Bots</li>
+    </ul>
+    <p><strong>Typical delivery time:</strong> up to 2 working business days.</p>
+  </div>
+
+  <div class="service-card">
+    <h3>Website Development</h3>
+    <p>Our websites include:</p>
+    <ul>
+      <li>Chatting Websites</li>
+      <li>Gaming Websites</li>
+      <li>AI-Powered Platforms</li>
+    </ul>
+    <p><strong>Typical delivery time:</strong> up to 5 working business days.</p>
+  </div>
+
+</section>
+
+<footer>
+  &copy; 2025 Scriptas. All rights reserved.
+</footer>
+
+<script>
+// Mobile menu toggle
+const menuToggle = document.getElementById('mobile-menu');
+const nav = document.querySelector('nav');
+
+menuToggle.addEventListener('click', () => {
+  nav.classList.toggle('active');
+});
+</script>
+
 </body>
 </html>
