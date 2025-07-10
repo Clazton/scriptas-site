@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Scriptas | Our Services</title>
+<title>Scriptas | Services</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
   * {
@@ -11,14 +11,14 @@
     font-family: 'Poppins', sans-serif;
   }
   body {
-    background: linear-gradient(135deg, #3d0000, #720000);
+    background: linear-gradient(135deg, #330000, #7a0000);
     color: #fff;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
   }
   header {
-    background: #6a0000;
+    background: #6d0000;
     padding: 1.5rem 2rem;
     position: sticky;
     top: 0;
@@ -69,11 +69,37 @@
     padding: 0 2rem;
   }
   h2.page-title {
-    text-align: center;
     font-size: 3rem;
     color: #ff6666;
     margin-bottom: 3rem;
+    letter-spacing: 2px;
     animation: slideFadeDown 1.3s ease forwards;
+    text-align: center;
+  }
+  .intro {
+    background: #5c0000;
+    padding: 1.8rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #b30000;
+    color: #ffc4c4;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    letter-spacing: 0.8px;
+    animation: slideFadeUp 1.3s ease forwards;
+  }
+  .redline {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #ff1a1a, #b30000, #ff1a1a);
+    margin: 1.5rem 0;
+    border-radius: 2px;
+    animation: pulseLine 2.5s infinite;
+  }
+  @keyframes pulseLine {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
   }
   section.service {
     background: #5c0000;
@@ -93,6 +119,14 @@
     margin-bottom: 1rem;
     letter-spacing: 1.2px;
   }
+  section.service ul {
+    margin-left: 1.2rem;
+    list-style-type: disc;
+    color: #ffb3b3;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
   section.service p {
     font-size: 1.1rem;
     line-height: 1.6;
@@ -100,6 +134,10 @@
   }
   @keyframes slideFadeDown {
     from {opacity: 0; transform: translateY(-30px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+  @keyframes slideFadeUp {
+    from {opacity: 0; transform: translateY(30px);}
     to {opacity: 1; transform: translateY(0);}
   }
   footer {
@@ -133,7 +171,8 @@
     main { margin: 2rem 1rem 3rem 1rem; padding: 0 1rem; }
     section.service { padding: 1.5rem 1.8rem; }
     section.service h3 { font-size: 1.6rem; }
-    section.service p { font-size: 1rem; }
+    section.service p, section.service ul { font-size: 1rem; }
+    .intro { font-size: 1rem; padding: 1.3rem 1.5rem; }
   }
 </style>
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -144,38 +183,50 @@
   <h1>Scriptas</h1>
   <nav>
     <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
+    <a href="services.html" aria-current="page">Services</a>
     <a href="about.html">About</a>
   </nav>
 </header>
 
 <main>
-  <h2 class="page-title">Our Comprehensive Services</h2>
+  <h2 class="page-title">Our Services</h2>
 
-  <section class="service" tabindex="0" aria-label="Custom Discord Bot Development">
-    <h3>Custom Discord Bot Development</h3>
-    <p>We build bespoke Discord bots tailored to your community’s needs. Whether it’s automating moderation, integrating AI-powered commands, music playback, or advanced server analytics — our bots are crafted for reliability and scalability.</p>
+  <div class="intro" tabindex="0">
+    Here at Scriptas, we offer two primary types of services:
+  </div>
+
+  <span class="redline" aria-hidden="true"></span>
+
+  <section class="service" tabindex="0" aria-label="Custom Discord Bots">
+    <h3>Custom Discord Bots</h3>
+    <p>Our custom-made bots cover a variety of needs, including:</p>
+    <ul>
+      <li>ERLC Bots</li>
+      <li>Moderation Bots (similar to Carl-bot)</li>
+      <li>Protection Bots</li>
+    </ul>
+    <p><strong>Typical delivery time:</strong> Up to 2 working business days.</p>
   </section>
 
-  <section class="service" tabindex="0" aria-label="Modern Website Design & Development">
-    <h3>Modern Website Design & Development</h3>
-    <p>Our team designs sleek, responsive websites that elevate your brand’s presence. From portfolios and landing pages to fully custom business solutions, we ensure your website looks professional and functions flawlessly across all devices.</p>
+  <span class="redline" aria-hidden="true"></span>
+
+  <section class="service" tabindex="0" aria-label="Website Development">
+    <h3>Website Development</h3>
+    <p>We design and build websites tailored to your project’s needs, including:</p>
+    <ul>
+      <li>Chatting Websites</li>
+      <li>Gaming Websites</li>
+      <li>AI-Powered Platforms</li>
+    </ul>
+    <p><strong>Typical delivery time:</strong> Up to 5 working business days.</p>
   </section>
 
-  <section class="service" tabindex="0" aria-label="API & Integration Services">
-    <h3>API & Integration Services</h3>
-    <p>Need to connect your Discord bot or website with third-party platforms? We provide secure API development and integration to streamline your workflows, automate tasks, and enhance user engagement.</p>
+  <span class="redline" aria-hidden="true"></span>
+
+  <section class="service" tabindex="0" aria-label="Delivery Time Notice">
+    <p><strong>Note:</strong> Delivery time may vary depending on project complexity and current team workload.</p>
   </section>
 
-  <section class="service" tabindex="0" aria-label="Maintenance & Support">
-    <h3>Maintenance & Support</h3>
-    <p>Our commitment doesn’t end at delivery. We offer ongoing maintenance and support packages to keep your bots and websites running smoothly, updated with the latest features and security patches.</p>
-  </section>
-
-  <section class="service" tabindex="0" aria-label="Consultation & Custom Solutions">
-    <h3>Consultation & Custom Solutions</h3>
-    <p>Have a unique project idea? Our expert consultants will work with you to develop tailored strategies and innovative solutions that align perfectly with your goals and budget.</p>
-  </section>
 </main>
 
 <footer>
