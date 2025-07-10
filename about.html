@@ -1,51 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About | Scriptas</title>
-  <link rel="stylesheet" href="css/style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Scriptas | About Us</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  body {
+    background: linear-gradient(135deg, #330000, #7a0000);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    background: #6d0000;
+    padding: 1.5rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px rgba(255, 0, 0, 0.6);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header h1 {
+    font-size: 2.8rem;
+    color: #ff4d4d;
+    letter-spacing: 4px;
+    animation: flicker 3s infinite alternate ease-in-out;
+  }
+  @keyframes flicker {
+    0%, 100% { text-shadow: 0 0 8px #ff2a2a, 0 0 20px #ff0000; }
+    50% { text-shadow: 0 0 20px #ff6666, 0 0 40px #ff1a1a; }
+  }
+  nav a {
+    color: #ffa3a3;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 2rem;
+    font-size: 1.1rem;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #ff3333;
+    bottom: -6px;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+  nav a:hover {
+    color: #ff9999;
+  }
+  nav a:hover::after {
+    width: 100%;
+  }
+  main {
+    max-width: 900px;
+    margin: 3rem auto 4rem auto;
+    padding: 0 2rem;
+    text-align: center;
+  }
+  h2.page-title {
+    font-size: 3rem;
+    color: #ff7777;
+    margin-bottom: 2rem;
+    letter-spacing: 1.5px;
+    animation: slideFadeDown 1.3s ease forwards;
+  }
+  p.description {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #ffb3b3;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: slideFadeUp 1.3s ease forwards;
+  }
+  @keyframes slideFadeDown {
+    from {opacity: 0; transform: translateY(-30px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+  @keyframes slideFadeUp {
+    from {opacity: 0; transform: translateY(30px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+  footer {
+    background: #500000;
+    color: #ff9999;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.95rem;
+    letter-spacing: 1.1px;
+    box-shadow: inset 0 1px 10px #990000;
+    margin-top: auto;
+  }
+  footer .social-links {
+    margin-top: 1rem;
+  }
+  footer .social-links a {
+    color: #ff6666;
+    font-size: 2.1rem;
+    margin: 0 1.3rem;
+    transition: color 0.3s ease;
+    text-decoration: none;
+  }
+  footer .social-links a:hover {
+    color: #ff1a1a;
+  }
+  /* Responsive */
+  @media (max-width: 768px) {
+    header h1 { font-size: 2.2rem; }
+    nav a { margin-left: 1rem; font-size: 1rem; }
+    h2.page-title { font-size: 2.5rem; }
+    p.description { font-size: 1.1rem; max-width: 90vw; }
+    main { margin: 2rem 1rem 3rem 1rem; padding: 0 1rem; }
+  }
+</style>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
 <header>
-  <h1>SCRIPTAS</h1>
+  <h1>Scriptas</h1>
   <nav>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
-    <a href="about.html" aria-current="page">About</a>
-    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
   </nav>
 </header>
 
 <main>
-  <section class="section" aria-label="About Scriptas">
-    <h2>About Scriptas</h2>
-    <p>Founded with a passion for cutting-edge technology and elegant design, Scriptas is dedicated to delivering premium digital solutions that drive real-world results. Our team specializes in building high-performance Discord bots and modern websites tailored specifically to client goals.</p>
-    <p>We prioritize quality, reliability, and user experience in every project, ensuring our clients stand out in a crowded digital landscape. Collaboration and transparency are the cornerstones of our process, empowering you with tools and insights every step of the way.</p>
-    <p>Join hundreds of satisfied clients who trust Scriptas for innovation and professionalism — let's build something extraordinary together.</p>
-  </section>
-
-  <section class="section" aria-label="Our Values">
-    <h2>Our Values</h2>
-    <ul style="list-style-type:none; margin-left:1rem; font-weight: 300;">
-      <li>✔️ Excellence in craftsmanship</li>
-      <li>✔️ Customer-centric collaboration</li>
-      <li>✔️ Transparency and integrity</li>
-      <li>✔️ Continuous innovation</li>
-      <li>✔️ Timely delivery with consistent support</li>
-    </ul>
-  </section>
+  <h2 class="page-title">About Scriptas</h2>
+  <p class="description">
+    Founded with a vision to empower communities through technology, Scriptas specializes in creating cutting-edge Discord bots and tailored websites. Our dedicated team of developers and designers prioritize excellence, security, and innovation in every project.<br><br>
+    With a client-first approach, we blend creativity with technical expertise to deliver solutions that not only meet but exceed expectations. Join us on our journey to shape the digital landscape with precision and passion.
+  </p>
 </main>
 
 <footer>
-  <a href="https://discord.gg/scriptas" target="_blank" rel="noopener" aria-label="Join Scriptas Discord">
-    <i class="fab fa-discord" style="pointer-events:none;"></i> Discord
-  </a>
+  <div class="social-links" aria-label="Social media links">
+    <a href="https://discord.gg/scriptas" target="_blank" aria-label="Discord"><i class="fab fa-discord"></i></a>
+  </div>
   <p>© 2025 Scriptas. All rights reserved.</p>
 </footer>
 
-<!-- FontAwesome CDN for Discord Icon -->
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
