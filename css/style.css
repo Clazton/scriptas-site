@@ -226,3 +226,39 @@ footer {
     padding: 1rem 0;
   }
 }
+
+/* ========================= */
+/* ✅ Team Section Styling   */
+/* ========================= */
+.team-list {
+  list-style: none;
+  padding: 1rem 0;
+  margin-top: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #f5c6c6;
+  border-left: 4px solid #b22222;
+  padding-left: 1.5rem;
+  background-color: #2b0000;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(139, 0, 0, 0.25);
+}
+
+.team-list li {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #3d0000;
+  transition: background-color 0.3s ease;
+}
+
+.team-list li:last-child {
+  border-bottom: none;
+}
+
+.team-list li:hover {
+  background-color: #3a0000;
+}
+
+.team-list li strong {
+  color: #ff4c4c;
+  font-weight: 600;
+}
