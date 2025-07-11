@@ -227,38 +227,52 @@ footer {
   }
 }
 
-/* ========================= */
-/* ✅ Team Section Styling   */
-/* ========================= */
+/* Team Section Styling */
+.team-intro {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #f0baba;
+  line-height: 1.7;
+}
+
 .team-list {
   list-style: none;
-  padding: 1rem 0;
-  margin-top: 1rem;
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: #f5c6c6;
-  border-left: 4px solid #b22222;
-  padding-left: 1.5rem;
-  background-color: #2b0000;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(139, 0, 0, 0.25);
+  padding: 1.5rem;
+  background-color: #2a0000;
+  border-left: 5px solid #b22222;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(178, 34, 34, 0.25);
 }
 
 .team-list li {
-  padding: 0.6rem 0;
-  border-bottom: 1px solid #3d0000;
-  transition: background-color 0.3s ease;
+  margin-bottom: 1.2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #3e0000;
+  transition: background 0.3s ease;
 }
 
 .team-list li:last-child {
   border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .team-list li:hover {
   background-color: #3a0000;
+  border-radius: 6px;
+  padding: 1rem;
 }
 
 .team-list li strong {
+  font-size: 1.2rem;
   color: #ff4c4c;
-  font-weight: 600;
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.team-list li span {
+  font-size: 0.95rem;
+  color: #f5c6c6;
+  display: block;
 }
