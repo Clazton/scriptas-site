@@ -1,67 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Scriptas - Custom Discord Bots & Websites</title>
-<link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scriptas - Home</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-
-<header>
-  <h1>Scriptas</h1>
-  <nav>
-    <a href="#home" class="active">Home</a>
-    <a href="#about">About Us</a>
-    <a href="#why">Why Choose Us</a>
-  </nav>
-</header>
-
-<main>
-  <section id="home" class="fade-in-up">
-    <h2>Welcome to Scriptas</h2>
-    <p>Custom Discord bots and sleek websites crafted with passion, speed, and reliability.</p>
-    <button class="btn" onclick="window.open('https://discord.gg/scriptas', '_blank')">Join Our Discord</button>
-  </section>
-
-  <section id="about" class="fade-in-up delay-1">
-    <h2>About Us</h2>
-    <div class="team">
-      <div class="member">
-        <h3>MrSeriously</h3>
-        <p>Web Developer<br>Discord Bot Developer</p>
-      </div>
-      <div class="member">
-        <h3>Alex</h3>
-        <p>Web Developer<br>Discord Bot Developer</p>
-      </div>
-      <div class="member">
-        <h3>Sajoodi</h3>
-        <p>Bot Developer</p>
-      </div>
+  <header>
+    <div class="container">
+      <h1>Scriptas</h1>
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="why-choose-us.html">Why Choose Us</a>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <section id="why" class="fade-in-up delay-2" tabindex="0">
-    <p>
-      Scriptas isn’t just another name in the flood of digital service providers — we’re built different. While others push overpriced, recycled code, we deliver high-quality, affordable solutions custom-made to fit your exact needs — fast.
-    </p>
-    <p>
-      We specialize in powerful, tailor-built Discord bots, including ERLC bots, moderation tools like Carl-bot, and advanced protection bots designed to keep your server running smoothly and securely. Every bot is made from scratch — no reused templates — and is typically delivered within 2 business days.
-    </p>
-    <p>
-      Need a website? We’ve got you covered. Whether you're looking for a chatting platform, a gaming-focused site, or an AI-powered interface, our team builds sleek, modern websites from the ground up. No cookie-cutter themes — just fully custom websites designed around your brand or community, usually completed in 5 business days or less.
-    </p>
-    <p>
-      At Scriptas, you’re not just getting code — you’re getting speed, reliability, and value. We code fast. We price fair. And we don’t deliver anything we wouldn’t proudly use ourselves.
-    </p>
-  </section>
-</main>
+  <main class="container home-main">
+    <section class="hero fade-in-up">
+      <h2>Welcome to Scriptas</h2>
+      <p>Your one-stop shop for custom Discord bots and sleek websites built fast, reliable, and affordable.</p>
+      <a href="https://discord.gg/scriptas" target="_blank" rel="noopener" class="btn">Join Our Discord</a>
+    </section>
 
-<footer>
-  <a href="https://discord.gg/scriptas" target="_blank" rel="noopener" class="discord-btn" aria-label="Join Scriptas Discord">Join our Discord</a>
-</footer>
+    <section class="features fade-in-up delay-1">
+      <h3>What We Offer</h3>
+      <div class="feature-list">
+        <article>
+          <h4>Custom Discord Bots</h4>
+          <p>Tailored bots designed to fit your server’s unique needs — from ERLC roleplay bots to moderation and protection.</p>
+        </article>
+        <article>
+          <h4>Modern Websites</h4>
+          <p>Fully custom websites crafted to highlight your brand, gaming community, or AI project — no cookie-cutter templates.</p>
+        </article>
+        <article>
+          <h4>Fast Delivery & Support</h4>
+          <p>We work efficiently without sacrificing quality, typically delivering bots in 2 business days and sites in 5.</p>
+        </article>
+      </div>
+    </section>
 
-<script src="script.js"></script>
+    <section class="testimonials fade-in-up delay-2">
+      <h3>What Our Clients Say</h3>
+      <blockquote>
+        “Scriptas built us a custom moderation bot that perfectly fits our community. The speed and quality were amazing.”<br>– <strong>Discord Server Admin</strong>
+      </blockquote>
+      <blockquote>
+        “Their website development services transformed our gaming group’s online presence. Highly recommended!”<br>– <strong>Gaming Community Lead</strong>
+      </blockquote>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Scriptas. Built with ❤️ and lots of red.</p>
+      <a href="https://discord.gg/scriptas" target="_blank" rel="noopener" aria-label="Join Scriptas Discord" class="discord-btn">Join our Discord</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
